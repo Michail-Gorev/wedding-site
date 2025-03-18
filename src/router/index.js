@@ -4,7 +4,8 @@ import GuestForm from '../views/GuestForm.vue';
 import EventInfo from '../views/EventInfo.vue';
 
 const routes = [
-  { path: '/', component: Home },
+  { path: '/', component: GuestForm },
+  { path: '/home', component: Home },
   { path: '/guest-form', component: GuestForm },
   { path: '/event-info', component: EventInfo },
 ];
