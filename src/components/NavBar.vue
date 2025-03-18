@@ -6,7 +6,7 @@
         <span></span>
       </div>
       <ul :class="{ active: isMenuOpen }">
-        <li><router-link to="/">Главная</router-link></li>
+        <li><router-link to="/home">Главная</router-link></li>
         <li><router-link to="/guest-form">Анкета гостя</router-link></li>
         <li><router-link to="/event-info">Информация о событии</router-link></li>
       </ul>
