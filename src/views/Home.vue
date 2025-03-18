@@ -28,25 +28,28 @@
   }
 
   .welcome-text {
-    font-family: 'Great Vibes', cursive;
+    font-family: 'Playfair Display', serif;
     font-size: 3rem;
     color: var(--rust);
     margin-bottom: 20px;
   }
 
   .names-date {
+    font-family: 'Lora', serif;
     font-size: 2rem;
     color: var(--olive);
     margin-bottom: 20px;
   }
 
   .invitation-text {
+    font-family: 'Lora', serif;
     font-size: 1.5rem;
     color: var(--text-light);
     margin-bottom: 20px;
   }
 
   .guest-form-button {
+    font-family: 'Montserrat', sans-serif;
     display: inline-block;
     margin-top: 20px;
     padding: 12px 24px;
