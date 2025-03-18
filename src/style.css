@@ -1,0 +1,229 @@
+/* style.css */
+:root {
+  --sage: #B2AC88;
+  --mustard: #D4A418;
+  --sunset: #E67E51;
+  --terracotta: #E27D5E;
+  --rust: #B8523A;
+  --olive: #6B7C3F;
+  --background: #F5F3E7; /* Приглушенный кремовый фон */
+  --text: #3E3E3E; /* Основной цвет текста */
+  --text-light: #5E5E5E; /* Светлый текст */
+}
+
+/* Базовые стили */
+body {
+  background-color: var(--background);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: var(--rust);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--sunset);
+}
+
+/* Стили для кнопок */
+.button {
+  background-color: var(--mustard);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: var(--sunset);
+}
+
+/* Стили для карточек */
+.card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+  color: var(--rust);
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  color: var(--text-light);
+  font-size: 14px;
+}
+
+/* Стили для навигационного меню */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: var(--sage);
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  margin-left: 20px;
+}
+
+ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+ul li a:hover {
+  background-color: var(--mustard);
+  color: var(--text);
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--sage);
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  ul.active {
+    display: flex;
+  }
+
+  ul li {
+    margin: 0;
+    text-align: center;
+  }
+
+  ul li a {
+    display: block;
+    padding: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    padding: 10px;
+  }
+
+  ul li a {
+    font-size: 0.9rem;
+  }
+}
+
+/* Стили для форм */
+.form-input {
+  background-color: white;
+  border: 1px solid var(--olive);
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 14px;
+  color: var(--text);
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.form-input:focus {
+  border-color: var(--sunset);
+  outline: none;
+}
+
+.form-label {
+  color: var(--rust);
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+/* Стили для аккордеона */
+.accordion {
+  background-color: white;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.accordion-header {
+  background-color: var(--olive);
+  color: white;
+  padding: 16px;
+  border-radius: 8px 8px 0 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-content {
+  padding: 16px;
+  color: var(--text-light);
+}
